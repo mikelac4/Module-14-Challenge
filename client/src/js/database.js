@@ -37,10 +37,10 @@ const trans = dB.transaction('jate', 'readonly');
 
 const store = trans.objectStore('jate');
 
-const request = store.getAll();
+const request = store.get(1);
 
 const result = await request;
-console.log('result.value', result);
+console.log('result.value', result.value);
 return result?.value;
 };
 
